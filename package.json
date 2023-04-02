@@ -2,7 +2,6 @@
   "name": "umamin-ai",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +11,9 @@
   "dependencies": {
     "@apollo/server": "^4.5.0",
     "class-validator": "^0.14.0",
+    "dotenv": "^16.0.3",
     "graphql": "^15.3.0",
+    "openai": "^3.2.1",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.1.1"
   },
