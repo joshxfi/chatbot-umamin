@@ -1,21 +1,9 @@
 import "reflect-metadata";
-import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { buildSchema, Field, ObjectType, Query, Resolver } from "type-graphql";
+import { ApolloServer } from "@apollo/server";
+import { buildSchema } from "type-graphql";
 
-@ObjectType()
-class Hello {
-  @Field(() => String)
-  message: string;
-}
-
-@Resolver(Hello)
-class HelloResolver {
-  @Query(() => Hello)
-  hello() {
-    return { message: "Hello world!" };
-  }
-}
+import { HelloResolver } from "./schema/resolvers";
 
 const main = async () => {
   const schema = await buildSchema({
