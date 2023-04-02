@@ -3,11 +3,11 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import { ApolloServer } from "@apollo/server";
 import { buildSchema } from "type-graphql";
 
-import { HelloResolver } from "./schema/resolvers";
+import { ChatResolver } from "./schema/resolvers";
 
 const main = async () => {
   const schema = await buildSchema({
-    resolvers: [HelloResolver],
+    resolvers: [ChatResolver],
   });
 
   const server = new ApolloServer({

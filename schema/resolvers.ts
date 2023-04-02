@@ -1,18 +1,16 @@
-import { Query, Resolver } from "type-graphql";
+import { Arg, Query, Resolver } from "type-graphql";
 import openai from "../config/openai";
-import { Hello } from "./types";
+import { Chat } from "./types";
 
-@Resolver(Hello)
-export class HelloResolver {
-  @Query(() => Hello)
-  async hello() {
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: "Say this is a test",
-      max_tokens: 7,
-      temperature: 0,
+@Resolver()
+export class ChatResolver {
+  @Query(() => Chat)
+  async getResponse(@Arg("prompt", () => String) prompt: string) {
+    const _response = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: prompt }],
     });
 
-    return { message: response.data.choices[0].text };
+    return { response: _response.data.choices[0].message.content };
   }
 }
