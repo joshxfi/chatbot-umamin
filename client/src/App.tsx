@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { gql, useMutation } from "@apollo/client";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { Chat } from "./components/Chat";
@@ -17,6 +17,7 @@ const GET_RESPONSE = gql`
 `;
 
 const App = () => {
+  const chatRef = useRef<HTMLDivElement>(null);
   const [prompt, setPrompt] = useState("");
   const [chatLog, setChatLog] = useState<ChatLog[]>([
     {
@@ -60,9 +61,16 @@ const App = () => {
             message: data.getResponse.response,
           },
         ]);
+
+        setTimeout(() => {
+          chatRef.current?.scrollIntoView({ behavior: "smooth" });
+        }, 500);
       },
     });
 
+    setTimeout(() => {
+      chatRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 500);
     setPrompt("");
   };
 
@@ -79,16 +87,17 @@ const App = () => {
         </div>
 
         {/* Message */}
-        <div className="flex min-h-[170px] flex-col justify-between space-y-5 px-5 pt-10 sm:space-y-0 sm:px-7 md:mb-4">
+        <div className="flex min-h-[170px] max-h-[400px] overflow-y-scroll flex-col justify-between space-y-5 px-5 pt-10 sm:space-y-0 sm:px-7 md:mb-4">
           {chatLog.map((c) => (
             <Chat type={c.type} content={c.message} />
           ))}
+          <div ref={chatRef}>test</div>
         </div>
 
         {/* Send Message */}
         <form
           onSubmit={handleSubmit}
-          className="bg-secondary-200 items-center py-5 px-4 h-[85px] mt-4 md:px-7"
+          className="bg-secondary-200 border-t-2 border-secondary-100 items-center py-5 px-4 h-[85px] mt-4 md:px-7"
         >
           <div className="flex rounded-full items-center text-white bg-secondary-100 px-6 py-3">
             <input
