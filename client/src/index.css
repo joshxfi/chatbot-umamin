@@ -21,7 +21,7 @@
 }
 
 .send:before {
-  right: -7px;
+  right: -9px;
   width: 20px;
   border-bottom-left-radius: 16px 14px;
 }
@@ -29,11 +29,11 @@
 .send:after {
   right: -26px;
   width: 26px;
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 9px;
 }
 
 .receive:before {
-  left: -7px;
+  left: -9px;
   width: 20px;
   border-bottom-right-radius: 16px 14px;
 }
@@ -41,5 +41,52 @@
 .receive:after {
   left: -26px;
   width: 26px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 9px;
+}
+
+/* chat-loading */
+
+.dot-flashing {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background-color: #999999;
+  color: #999999;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+.dot-flashing::before, .dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -15px;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background-color: #999999;
+  color: #999999;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+.dot-flashing::after { left: 15px;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background-color: #999999;
+  color: #999999;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #999999;
+  }
+  50%, 100% {
+    background-color: #656565;
+  }
 }

@@ -5,7 +5,7 @@ import { Chat } from "./components/Chat";
 
 interface ChatLog {
   type: "user" | "bot";
-  message: string;
+  message: React.ReactNode;
 }
 
 const GET_RESPONSE = gql`
@@ -44,6 +44,14 @@ const App = () => {
       {
         type: "user",
         message: prompt,
+      },
+      {
+        type: "bot",
+        message: (
+          <div className="px-6 py-1">
+            <div className="dot-flashing"></div>
+          </div>
+        ),
       },
     ]);
 
@@ -91,7 +99,7 @@ const App = () => {
           {chatLog.map((c) => (
             <Chat type={c.type} content={c.message} />
           ))}
-          <div ref={chatRef}>test</div>
+          <div ref={chatRef}></div>
         </div>
 
         {/* Send Message */}
