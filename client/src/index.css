@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@800&display=swap');
+
 @tailwind base;
 @tailwind components;
-@tailwid utils;
+@tailwind utilities;
+
+.chat-p {
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 20px;
+  position: relative;
+  border-radius: 25px;
+}
+
+.chat-p:before,
+.chat-p:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+}
+
+.send:before {
+  right: -7px;
+  width: 20px;
+  border-bottom-left-radius: 16px 14px;
+}
+
+.send:after {
+  right: -26px;
+  width: 26px;
+  border-bottom-left-radius: 10px;
+}
+
+.receive:before {
+  left: -7px;
+  width: 20px;
+  border-bottom-right-radius: 16px 14px;
+}
+
+.receive:after {
+  left: -26px;
+  width: 26px;
+  border-bottom-right-radius: 10px;
+}
