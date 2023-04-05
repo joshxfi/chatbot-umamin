@@ -2,6 +2,10 @@
 
 This project is a web-based chatbot that uses the `gpt-3.5-turbo` model to generate natural language responses to user inputs. The functionality of this chatbot is similar to that of ChatGPT, but with a custom user interface based on [Umamin](https://umamin.link). This project is created for learning purposes to explore the capabilities of advanced language models.
 
+## Preview
+
+<img src='https://user-images.githubusercontent.com/69457996/229979641-02b3fff4-546a-4599-91c0-0aec31e7f370.gif' width='500'>
+
 ## Getting Started
 
 Clone this repository and navigate to the project directory:
