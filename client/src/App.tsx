@@ -83,7 +83,7 @@ const App = () => {
       <div className="border-secondary-100 bg-secondary-200 w-full overflow-hidden rounded-3xl border-2 md:w-[720px]">
         {/* Top */}
         <div className="bg-secondary-300 border-secondary-100 flex items-center justify-between border-b-2 px-7 py-4">
-          <p className="font-light text-sm text-gray-400">powered by gpt-3.5-turbo</p>
+          <p className="font-light text-sm text-gray-400">gpt-3.5-turbo</p>
 
           <h3 className="font-syne font-extrabold text-primary-200 text-center text-lg">
             umamin
