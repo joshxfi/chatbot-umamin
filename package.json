@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.ts",
+    "client": "cd client && pnpm run dev",
+    "start": "concurrently -c \"blue,green\" \"pnpm:server\" \"pnpm:client\""
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,7 @@
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "typescript": "^5.0.3"
   }
 }
