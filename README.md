@@ -4,7 +4,7 @@ This project is a web-based chatbot that uses the `gpt-3.5-turbo` model to gener
 
 ## Preview
 
-<img src='https://user-images.githubusercontent.com/69457996/229979641-02b3fff4-546a-4599-91c0-0aec31e7f370.gif' width='500'>
+<img src='https://user-images.githubusercontent.com/69457996/229979641-02b3fff4-546a-4599-91c0-0aec31e7f370.gif' width='600'>
 
 ## Getting Started
 
