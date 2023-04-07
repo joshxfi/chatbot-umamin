@@ -11,8 +11,8 @@ This project is a web-based chatbot that uses the `gpt-3.5-turbo` model to gener
 Clone this repository and navigate to the project directory:
 
 ```sh
-$ git clone --depth=1 https://github.com/joshxfi/chat-umamin.git
-$ cd chat-umamin
+$ git clone --depth=1 https://github.com/joshxfi/chatbot-umamin.git
+$ cd chatbot-umamin
 ```
 
 To use this repository, you'll need to obtain an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). Once you have your API key, create a `.env` file in the root directory of the repository and add the following line:
