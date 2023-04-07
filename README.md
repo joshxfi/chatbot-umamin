@@ -40,7 +40,7 @@ If you find a bug or want to suggest a new feature, feel free to create an issue
 
 If you want to customize the UI, you can modify the source code in the `client` directory.
 
-If you want to change the model of the chatbot or add new functionality, you can modify the code in the `schema` directory. See [API Reference](https://platform.openai.com/docs/api-reference/introduction) for the different models you can use.
+To change the model of the chatbot or add new functionality, you can modify the code in the `schema` directory. See [API Reference](https://platform.openai.com/docs/api-reference/introduction) for the different models you can use.
 
 ## Tech Stack
 
@@ -50,6 +50,7 @@ This project is built using the following technologies:
 - Tailwind CSS
 - Apollo
 - GraphQL (TypeGraphQL)
+- GPT-3.5 (OpenAI)
 
 ## License
 
