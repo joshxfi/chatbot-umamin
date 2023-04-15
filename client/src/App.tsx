@@ -86,7 +86,7 @@ const App = () => {
           <p className="font-light text-sm text-gray-400">gpt-3.5-turbo</p>
 
           <h3 className="font-syne font-extrabold text-primary-200 text-center text-lg">
-            umamin
+            chat-gipiry
           </h3>
         </div>
 
