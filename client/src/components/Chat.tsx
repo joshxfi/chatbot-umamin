@@ -1,9 +1,9 @@
-interface Props {
+type ChatProps = {
   type: "user" | "bot";
   content: React.ReactNode;
-}
+};
 
-export const Chat = ({ type, content }: Props) => {
+export const Chat = ({ type, content }: ChatProps) => {
   return (
     <div
       className={`${

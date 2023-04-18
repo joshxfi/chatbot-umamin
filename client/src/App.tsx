@@ -3,10 +3,10 @@ import { gql, useMutation } from "@apollo/client";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { Chat } from "./components/Chat";
 
-interface ChatLog {
+type ChatLog = {
   type: "user" | "bot";
   message: React.ReactNode;
-}
+};
 
 const GET_RESPONSE = gql`
   mutation GetResponse($prompt: String!) {
